@@ -31,12 +31,12 @@
 	  
     <!-- android -->
     <platform name="android">
-        <js-module src="www/gpsDetectionPlugin.js" name="gpsDetector">
-            <clobbers target="gpsDetector" />
+        <js-module src="www/gpsDetectionPlugin.js" name="gpsDetect">
+            <clobbers target="gpsDetect" />
         </js-module>
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="GpsDetector" >
-                <param name="android-package" value="com.butterflyeffect.plugins.GpsDetector"/>
+            <feature name="GpsDetectionPlugin" >
+                <param name="android-package" value="com.butterflyeffect.plugins.GPSDetectionPlugin"/>
             </feature>
         </config-file>
 
