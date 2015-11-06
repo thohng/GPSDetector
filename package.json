@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-android-gpsdetect",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cordova Gps Detector Android Plugin from orinial com.butterflyeffect.plugins",
   "cordova": {
     "id": "cordova-plugin-android-gpsdetect",
