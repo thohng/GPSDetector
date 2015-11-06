@@ -24,7 +24,7 @@
     id="cordova-plugin-android-gpsdetect"
     version="0.0.2">
     <name>AndroidGPSDetector</name>
-    <description>Cordova GPS Detector Android Plugin</description>
+    <description>Cordova GPS Detector Android Plugin from orinial com.butterflyeffect.plugins</description>
     <license>Apache 2.0</license>
     <keywords>cordova,android,gps,geolocation</keywords>
     <repo>https://github.com/thosoft/gpsdetector</repo>
