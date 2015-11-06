@@ -22,25 +22,30 @@
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-android-gpsdetect"
-    version="0.0.2">
-    <name>AndroidGPSDetector</name>
-    <description>Cordova GPS Detector Android Plugin from orinial com.butterflyeffect.plugins</description>
-    <license>Apache 2.0</license>
-    <keywords>cordova,android,gps,geolocation</keywords>
-    <repo>https://github.com/thosoft/gpsdetector</repo>
-	  
-    <!-- android -->
-    <platform name="android">
-        <js-module src="www/gpsDetectionPlugin.js" name="gpsDetect">
-            <clobbers target="gpsDetect" />
-        </js-module>
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="GpsDetectionPlugin" >
-                <param name="android-package" value="com.butterflyeffect.plugins.GPSDetectionPlugin"/>
-            </feature>
-        </config-file>
+    version="0.0.3">
+  <name>AndroidGPSDetector</name>
+  <description>Cordova GPS Detector Android Plugin from orinial com.butterflyeffect.plugins</description>
+  <license>Apache 2.0</license>
+  <keywords>cordova,android,gps,geolocation</keywords>
+  <repo>https://github.com/thosoft/gpsdetector</repo>
 
-        <source-file src="src/android/GPSDetectionPlugin.java" target-dir="src/com/butterflyeffect/plugins" />
-    </platform>
+  <!-- android -->
+  <platform name="android">
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+      <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    </config-file>
+    <js-module src="www/gpsDetectionPlugin.js" name="gpsDetect">
+      <clobbers target="gpsDetect" />
+    </js-module>
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="GpsDetectionPlugin" >
+        <param name="android-package" value="com.butterflyeffect.plugins.GPSDetectionPlugin"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/GPSDetectionPlugin.java" target-dir="src/com/butterflyeffect/plugins" />
+  </platform>
 
 </plugin>
